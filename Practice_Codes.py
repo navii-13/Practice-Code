@@ -82,6 +82,39 @@ def palindrome_2(x):
         c += 1
     print(c)
 
+def fizzbuzz(num):
+    for i in range(1,num+1):
+        if i % 5 == 0 and i % 3 == 0:
+            print(str(i) + ":FizzBuzz")
+        elif i % 5 == 0:
+            print(str(i) + ":Buzz")
+        elif i % 3 == 0:
+            print(str(i) +":Fizz")
+        else:
+            print(i)
+
+def steps(n):
+    if n == 1:
+        return 1
+    if n == 0:
+        return 1
+    return steps(n - 2) + steps(n - 1)
+
+def a_string(string):
+    count = 0
+    for i in range(len(string)):
+        if string[i] == 'a' or string[i] == 'A':
+            count += 1
+    return count
+
+
+def a_stringrec(string,k):
+    if len(string) == k:
+        return 0
+    if string[k] == 'a' or string[k] == 'A':
+        return 1 + a_stringrec(string, k+1)
+    return a_stringrec(string, k+1)
+
 
 
 
